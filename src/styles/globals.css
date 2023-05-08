@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:ital@1&display=swap');
+
+
+@font-face {
+    font-family: 'Zilla-Normal';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('ZillaSlab-Regular'), url(/src/styles/fonts/ZillaSlab-Regular) format('ttf');
+}

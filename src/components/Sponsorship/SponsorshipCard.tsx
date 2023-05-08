@@ -1,5 +1,5 @@
+import CreamTextureCard from "@/assets/images/cream-texture-2.jpg";
 import { ISponsorship } from "@/lib/Sponsorship";
-import { primaryColor } from "@/theme/colors";
 import {
   Box,
   Button,
@@ -29,6 +29,7 @@ const SponsorshipCard = ({ sponsorship }: SponsorshipCardProps) => {
       p={2}
       boxShadow="base"
       bg="gray.50"
+      backgroundImage={`url(${CreamTextureCard.src})`}
     >
       <HStack>
         <Box h="200px" w="150px" borderRadius={10}>
@@ -43,24 +44,26 @@ const SponsorshipCard = ({ sponsorship }: SponsorshipCardProps) => {
 
         <Box>
           <VStack alignItems="start">
-            <Heading size="md">{sponsorship.givenName}</Heading>
+            <Heading color={"#445661"} size="md">
+              {sponsorship.givenName}
+            </Heading>
             <HStack>
-              <Icon as={MdCake} color={primaryColor} fontSize="20px" />
+              <Icon as={MdCake} color={"#445661"} fontSize="20px" />
               <Text>{moment(sponsorship.birthdate).format("MMM Do YYYY")}</Text>
             </HStack>
             <HStack>
-              <Icon as={BiWorld} color={primaryColor} fontSize="20px" />
+              <Icon as={BiWorld} color={"#445661"} fontSize="20px" />
               <Text>{sponsorship.countryName}</Text>
             </HStack>
             <HStack>
-              <Icon as={FaCalendarAlt} color={primaryColor} fontSize="20px" />
+              <Icon as={FaCalendarAlt} color={"#445661"} fontSize="20px" />
               <Text>{sponsorship.age} Year(s)</Text>
             </HStack>
             <HStack>
-              <Icon as={RiParentFill} color={primaryColor} fontSize="20px" />
+              <Icon as={RiParentFill} color={"#445661"} fontSize="20px" />
               <Text>{sponsorship.orphanFlag ? "Orphan" : "Not an Orphan"}</Text>
             </HStack>
-            <Button size="sm" colorScheme="blue">
+            <Button backgroundColor={"#BF4732"} size="sm" colorScheme="blue">
               Sponsor {sponsorship.gender === "Male" ? "him" : "her"}
             </Button>
           </VStack>

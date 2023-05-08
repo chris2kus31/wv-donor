@@ -1,5 +1,4 @@
-import MainBg from "@/assets/images/main-bg.png";
-import WaterColorBg from "@/assets/images/water-color-bg.png";
+import WorldMap from "@/assets/images/world-map.png";
 import useGetSponsorships from "@/hooks/useGetSponsorships";
 import { ISponsorshipFilters } from "@/lib/Sponsorship";
 import { Box, Divider, Heading } from "@chakra-ui/react";
@@ -23,7 +22,7 @@ const Sponsorship = () => {
       <Box
         p={[2, 5, 10]}
         borderRadius="8px 8px 0px 0px"
-        backgroundImage={`url(${WaterColorBg.src})`}
+        backgroundColor={"#34B798"}
       >
         <Heading color="white">Sponsor a child</Heading>
 
@@ -34,7 +33,11 @@ const Sponsorship = () => {
         />
       </Box>
 
-      <Box p={[2, 5, 10]} backgroundImage={`url(${MainBg.src})`}>
+      <Box
+        p={[2, 5, 10]}
+        backgroundColor={"#1B3240"}
+        backgroundImage={`url(${WorldMap.src})`}
+      >
         {isLoading ? (
           <CenteredSpinner />
         ) : (

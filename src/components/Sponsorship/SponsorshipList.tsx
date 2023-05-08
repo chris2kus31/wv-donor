@@ -1,5 +1,4 @@
 import { ISponsorshipAPIResponse } from "@/lib/Sponsorship";
-import { primaryColor } from "@/theme/colors";
 import {
   Alert,
   AlertIcon,
@@ -49,8 +48,11 @@ const SponsorshipList = ({ sponsorshipDetails }: SponsorshipListProps) => {
         mt={10}
         justifyContent="space-between"
       >
-        <Box mt={[5, 0, 0]}>
-          <b>Total:</b> {sponsorshipDetails.data.totalCount}
+        <Box mt={[5, 0, 0]} display={"flex"}>
+          <Text color={"white"}>Total:</Text>
+          <Text color={"white"} pl={5}>
+            {sponsorshipDetails.data.totalCount}
+          </Text>
         </Box>
         <Flex direction={["column-reverse", "row", "row"]} gap={15}>
           <Legend icon={MdCake} label="Birthdate" />
@@ -66,8 +68,8 @@ const SponsorshipList = ({ sponsorshipDetails }: SponsorshipListProps) => {
 const Legend = ({ icon, label }: { icon: IconType; label: string }) => {
   return (
     <HStack>
-      <Icon as={icon} color={primaryColor} fontSize="20px" />
-      <Text>{label}</Text>
+      <Icon as={icon} color={"white"} fontSize="20px" />
+      <Text color={"white"}>{label}</Text>
     </HStack>
   );
 };
