@@ -18,3 +18,9 @@ Minimum requirements to run project
 
 - You must have a Subscription Key give via WV. Insert key in your .env file
 - Minimum node version is 14.18.0
+
+## Mobile Display
+
+Quick way to test Mobile display instructions
+
+- Via Chrome DevTools under Toggle device toolbar
