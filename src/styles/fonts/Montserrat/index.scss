@@ -1,0 +1,41 @@
+$fontName: "Montserrat";
+
+@mixin font-face(
+  $font-name,
+  $font-path,
+  $font-weight: 400,
+  $font-style: normal
+) {
+  @font-face {
+    font-family: $font-name;
+    font-style: $font-style;
+    font-weight: $font-weight;
+    font-display: auto;
+    src: url("#{$font-path}.ttf") format("truetype");
+  }
+}
+
+/*
+
+Defines from thin to thick characters. 400 is the same as normal, and 700 is the same as bold
+
+Lato Font-Sizes:
+100, Thin
+300, Light
+400, Regular
+500, Medium
+600, Semi-bold
+700, Bold
+800, Extrabold
+900, black
+*/
+
+@include font-face("#{$fontName}", "./Montserrat-Thin", 100);
+@include font-face("#{$fontName}", "./Montserrat-ExtraLight", 200);
+@include font-face("#{$fontName}", "./Montserrat-Light", 300);
+@include font-face("#{$fontName}", "./Montserrat-Regular", 400);
+@include font-face("#{$fontName}", "./Montserrat-Medium", 500);
+@include font-face("#{$fontName}", "./Montserrat-SemiBold", 600);
+@include font-face("#{$fontName}", "./Montserrat-Bold", 700);
+@include font-face("#{$fontName}", "./Montserrat-ExtraBold", 800);
+@include font-face("#{$fontName}", "./Montserrat-Black", 900);

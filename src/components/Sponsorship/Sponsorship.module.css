@@ -1,0 +1,9 @@
+.datePicker {
+  background-color: transparent;
+  padding: 0px 16px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  height: 39px;
+  width: 100%;
+  background-color: white;
+}
