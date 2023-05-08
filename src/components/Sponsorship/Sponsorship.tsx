@@ -37,6 +37,7 @@ const Sponsorship = () => {
         p={[2, 5, 10]}
         backgroundColor={"#1B3240"}
         backgroundImage={`url(${WorldMap.src})`}
+        backgroundBlendMode={"color-burn"}
       >
         {isLoading ? (
           <CenteredSpinner />
