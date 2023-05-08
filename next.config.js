@@ -1,7 +1,8 @@
-const withSvgr = require('next-plugin-svgr');
-
+const withSvgr = require("next-plugin-svgr");
 
 /** @type {import('next').NextConfig} */
+
+const API_KEY = process.env.WV_DONOR_KEY;
 
 const nextConfig = withSvgr({
   reactStrictMode: true,
@@ -15,9 +16,12 @@ const nextConfig = withSvgr({
     titleProp: true,
     icon: true,
   },
-  webpack(config, options) {
-    return config
-  }
-})
+  webpack(config) {
+    return config;
+  },
+  publicRuntimeConfig: {
+    API_KEY,
+  },
+});
 
-module.exports = nextConfig
+module.exports = nextConfig;

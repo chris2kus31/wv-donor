@@ -1,3 +1,4 @@
+import getConfig from "next/config";
 import axios from "./axios";
 
 export const COUNTRY_CODES_MAPPING: Record<string, string> = {
@@ -108,13 +109,14 @@ export const getSponsorships = async ({
 }: {
   sponsorshipFilters: ISponsorshipPayload;
 }) => {
+  const { publicRuntimeConfig } = getConfig();
   return await axios
     .post<ISponsorshipAPIResponse>(
       "https://wv-rcds-uat-api.azure-api.net/v3/api/Sponsorship/children/search/web",
       sponsorshipFilters,
       {
         headers: {
-          "Ocp-Apim-Subscription-Key": "aecbb2aaf5884e8ebe867c21565f0908",
+          "Ocp-Apim-Subscription-Key": publicRuntimeConfig.API_KEY,
           "Content-Type": "application/json-patch+json",
         },
       }
