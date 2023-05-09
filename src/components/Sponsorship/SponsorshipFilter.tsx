@@ -13,6 +13,7 @@ import { MultiValue, SingleValue } from "react-select/dist/declarations/src";
 import FormFieldContainer from "../Common/FormFieldContainer";
 import styles from "./Sponsorship.module.css";
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface ISponsorshipSelectedFilter
   extends Pick<
     ISponsorshipFilters,

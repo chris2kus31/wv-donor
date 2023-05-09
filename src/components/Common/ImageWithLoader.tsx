@@ -20,6 +20,7 @@ const ImageWithLoader: React.FC<ImageProps> = ({ ...imageProps }) => {
       borderRadius={imageProps.borderRadius ? imageProps.borderRadius : 0}
     >
       <Image
+        alt=""
         {...imageProperties}
         src={imageURL}
         onLoad={() => setIsLoaded(true)}
