@@ -6,6 +6,9 @@ First, run the development server:
 
 ```bash
 cp env.example .env
+# insert subscription key nexxt to WV_DONOR_KEY
+# without key, project will not return results
+
 npm install
 npm run dev
 ```
